@@ -13,4 +13,14 @@ body, html {
   -webkit-background-size: cover;
   -moz-background-size: cover;
 }
+
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+h1 {
+  color: yellow;
+}
 /*# sourceMappingURL=main.css.map */

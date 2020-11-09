@@ -33,11 +33,12 @@ header h2 {
   text-shadow: 0 0 8px #0040ff;
 }
 
-header a {
+header .header-btn {
   padding: 1.25rem 2rem;
+  font-size: 1.2rem;
   font-family: "Varela Round";
   text-transform: uppercase;
-  border: 0;
+  background-color: #e6e6e6;
   border-color: white;
   -webkit-box-shadow: 0 0 10px #0040ff;
           box-shadow: 0 0 10px #0040ff;
@@ -46,15 +47,11 @@ header a {
   font-family: "Courier New";
 }
 
-header .B {
-  background-color: #e6e6e6;
-}
-
-header a:hover {
+header .header-btn:hover {
   background-color: white;
 }
 
-header a:focus {
+header .header-btn:focus {
   background-color: white;
 }
 

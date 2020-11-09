@@ -44,25 +44,23 @@ header {
     font-family: "Times New Roman", Times, serif;
     text-shadow: 0 0 8px $text-shadow;
   }
-  a {
+
+  .header-btn{
     padding: 1.25rem 2rem;
+    font-size: 1.2rem;
     font-family: "Varela Round";
     text-transform: uppercase;
-    border: 0;
+    background-color: #e6e6e6;
     @include border-theme();
     @include body-textD();
-  }
+    
+    &:hover{
+      background-color: white;
+    }
 
-  .B{
-    background-color: #e6e6e6;
-  }
-
-  a:hover {
-    background-color: white;
-  }
-
-  a:focus {
-    background-color: white;
+    &:focus {
+      background-color: white;
+    }
   }
 }
 
@@ -83,7 +81,7 @@ header {
   }
   header h2 {
     font-size: 2rem;
-    text-shadow: 0 0 10px #0040ff;
+    text-shadow: 0 0 10px $text-shadow;
   }
 }
 

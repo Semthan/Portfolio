@@ -1,22 +1,101 @@
-@import "../style/custom_bootstrap/custom_bootstrap.scss";
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+$text-shadow: #0040ff;
 
-body,html{
-    height: 100%;
-    margin: 0;
+@mixin border-theme {
+  border-color: white;
+  box-shadow: 0 0 10px #0040ff;
+}
+
+@mixin body-textD {
+    color: #0d0d0d;	
+    font-size: 1rem;
+    font-family: "Courier New"; 
+}
+
+//------|HEADER|------
+header {
+  height: 100vh;
+  min-height: 500px;
+  background-image: url("../media/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+
+  h1 {
+    padding-top: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Varela Round";
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.8rem;
+    text-shadow: 2px 2px 8px $text-shadow;
   }
 
-  .hero{
-    height: 100vh;
-    min-height: 500px;
-    background-image: url("../media/hero.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 900;
+    font-family: "Times New Roman", Times, serif;
+    text-shadow: 0 0 8px $text-shadow;
+  }
+  a {
+    padding: 1.25rem 2rem;
+    font-family: "Varela Round";
+    text-transform: uppercase;
+    border: 0;
+    @include border-theme();
+    @include body-textD();
   }
 
-  #about{
-    display: flex;
+  .B{
+    background-color: #e6e6e6;
   }
 
+  a:hover {
+    background-color: white;
+  }
+
+  a:focus {
+    background-color: white;
+  }
+}
+
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    text-shadow: 2px 2px 12px $text-shadow;
+  }
+}
+
+@media (min-width: 992px) {
+  header h1 {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.5rem;
+    text-shadow: 2px 2px 12px $text-shadow;
+  }
+  header h2 {
+    font-size: 2rem;
+    text-shadow: 0 0 10px #0040ff;
+  }
+}
+
+#about {
+  display: flex;
+}
+
+#portfolio {
+  display: flex;
+  background-color: gray;
+}
+
+#contact {
+  background-color: lightgray;
+}

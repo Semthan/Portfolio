@@ -7,13 +7,20 @@ $text-shadow: #0040ff;
 
 @mixin border-theme {
   border-color: white;
-  box-shadow: 0 0 10px #0040ff;
+  box-shadow: 0 0 10px $text-shadow;
 }
 
 @mixin body-textD {
-    color: #0d0d0d;	
-    font-size: 1rem;
-    font-family: "Courier New"; 
+  color: #0d0d0d;
+  font-size: 1rem;
+  font-family: "Courier New";
+}
+
+@mixin fadeOut{
+  animation: fadeOut;
+  animation-duration: 3s;
+  animation-timing-function: ease-out; 
+  animation-iteration-count: 1;
 }
 
 //------|HEADER|------
@@ -36,6 +43,7 @@ header {
     line-height: 2.5rem;
     letter-spacing: 0.8rem;
     text-shadow: 2px 2px 8px $text-shadow;
+    @include fadeOut();
   }
 
   h2 {
@@ -43,18 +51,20 @@ header {
     font-weight: 900;
     font-family: "Times New Roman", Times, serif;
     text-shadow: 0 0 8px $text-shadow;
+    @include fadeOut();
   }
 
-  .header-btn{
+  a{
     padding: 1.25rem 2rem;
-    font-size: 1.2rem;
-    font-family: "Varela Round";
     text-transform: uppercase;
+    font-size: 1.25rem;
+    color: black;
+    font-family: "Varela Round";
+    text-decoration: none;
     background-color: #e6e6e6;
     @include border-theme();
-    @include body-textD();
-    
-    &:hover{
+
+    &:hover {
       background-color: white;
     }
 
@@ -63,6 +73,20 @@ header {
     }
   }
 }
+
+#about {
+  display: flex;
+}
+
+#portfolio {
+  display: flex;
+  background-color: gray;
+}
+
+#contact {
+  background-color: lightgray;
+}
+
 
 @media (min-width: 768px) {
   header h1 {
@@ -85,15 +109,7 @@ header {
   }
 }
 
-#about {
-  display: flex;
-}
-
-#portfolio {
-  display: flex;
-  background-color: gray;
-}
-
-#contact {
-  background-color: lightgray;
+@keyframes fadeOut{
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }

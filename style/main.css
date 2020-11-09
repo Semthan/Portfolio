@@ -24,6 +24,14 @@ header h1 {
   line-height: 2.5rem;
   letter-spacing: 0.8rem;
   text-shadow: 2px 2px 8px #0040ff;
+  -webkit-animation: fadeOut;
+          animation: fadeOut;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 header h2 {
@@ -31,28 +39,52 @@ header h2 {
   font-weight: 900;
   font-family: "Times New Roman", Times, serif;
   text-shadow: 0 0 8px #0040ff;
+  -webkit-animation: fadeOut;
+          animation: fadeOut;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
-header .header-btn {
+header a {
   padding: 1.25rem 2rem;
-  font-size: 1.2rem;
-  font-family: "Varela Round";
   text-transform: uppercase;
+  font-size: 1.25rem;
+  color: black;
+  font-family: "Varela Round";
+  text-decoration: none;
   background-color: #e6e6e6;
   border-color: white;
   -webkit-box-shadow: 0 0 10px #0040ff;
           box-shadow: 0 0 10px #0040ff;
-  color: #0d0d0d;
-  font-size: 1rem;
-  font-family: "Courier New";
 }
 
-header .header-btn:hover {
+header a:hover {
   background-color: white;
 }
 
-header .header-btn:focus {
+header a:focus {
   background-color: white;
+}
+
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: gray;
+}
+
+#contact {
+  background-color: lightgray;
 }
 
 @media (min-width: 768px) {
@@ -76,20 +108,21 @@ header .header-btn:focus {
   }
 }
 
-#about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-#portfolio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: gray;
-}
-
-#contact {
-  background-color: lightgray;
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=main.css.map */

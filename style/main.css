@@ -78,7 +78,7 @@ header a:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2rem;
+  padding: 2rem 5rem;
   background: white;
   /* Old browsers */
   /* FF3.6-15 */
@@ -106,7 +106,7 @@ header a:focus {
 }
 
 #about-me img {
-  width: 50%;
+  width: 40%;
   -ms-grid-column-align: center;
       justify-self: center;
   border: 2px solid black;

@@ -17,10 +17,10 @@ $text-shadow: #0040ff;
   font-family: "Courier New";
 }
 
-@mixin fadeOut{
+@mixin fadeOut {
   animation: fadeOut;
   animation-duration: 3s;
-  animation-timing-function: ease-out; 
+  animation-timing-function: ease-out;
   animation-iteration-count: 1;
 }
 
@@ -55,7 +55,7 @@ header {
     @include fadeOut();
   }
 
-  a{
+  a {
     padding: 1.25rem 2rem;
     text-transform: uppercase;
     font-size: 1.25rem;
@@ -79,23 +79,34 @@ header {
   display: flex;
   flex-direction: column;
   padding: 2rem 5rem;
-  background: rgb(255,255,255); /* Old browsers */
-  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */  
+  background: rgb(255, 255, 255); /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 
-  .my-row{
+  .my-row {
     display: flex;
   }
 }
 
-
-#about-me{
+#about-me {
   display: flex;
   justify-content: center;
 
-  img{
+  img {
     width: 40%;
     justify-self: center;
     border: 2px solid black;
@@ -105,13 +116,71 @@ header {
 
 #portfolio {
   display: flex;
-  background-color: gray;
+  flex-direction: column;
+  padding: 2rem 5rem;
+  background: rgb(0, 0, 0); /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+
+#projects-menu {
+  display: flex;
+  justify-content: center;
+
+  button {
+    padding: 10px;
+    margin: 2px;
+    border: 0;
+    border-radius: 5%;
+    color: black;
+    background-color: transparent;
+
+    &:hover {
+      background-color: white;
+    }
+
+    &:focus {
+      background-color: white;
+    }
+
+    &:active {
+      background-color: white;
+    }
+  }
+}
+
+#projects{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+.my-card{
+  display: block;
+  width: 33%;
+  padding: 2rem;
+  border: 1px solid red;
+
 }
 
 #contact {
   background-color: lightgray;
 }
-
 
 @media (min-width: 768px) {
   header h1 {
@@ -134,7 +203,11 @@ header {
   }
 }
 
-@keyframes fadeOut{
-  from { opacity: 0; }
-  to   { opacity: 1; }
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

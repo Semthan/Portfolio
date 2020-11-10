@@ -117,7 +117,68 @@ header a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: gray;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 5rem;
+  background: black;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(white));
+  background: linear-gradient(to bottom, black 0%, white 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */
+}
+
+#projects-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#projects-menu button {
+  padding: 10px;
+  margin: 2px;
+  border: 0;
+  border-radius: 5%;
+  color: black;
+  background-color: transparent;
+}
+
+#projects-menu button:hover {
+  background-color: white;
+}
+
+#projects-menu button:focus {
+  background-color: white;
+}
+
+#projects-menu button:active {
+  background-color: white;
+}
+
+#projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+.my-card {
+  display: block;
+  width: 33%;
+  padding: 2rem;
+  border: 1px solid red;
 }
 
 #contact {

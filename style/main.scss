@@ -165,17 +165,32 @@ header {
 
 #projects{
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  padding: 1rem; 
+  border: 1px solid black;
+}
+
+#projects2{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem; 
   border: 1px solid black;
 }
 
 .my-card{
-  display: block;
-  width: 33%;
-  padding: 2rem;
+  width: 50%;
+  padding: 1rem;
   border: 1px solid red;
+  
+  img{
+    width: 100%;
+    height: 70%;
+  }
+}
 
+
+.hidden {
+  display: none !important;
 }
 
 #contact {

@@ -5,6 +5,7 @@
 
 body,
 html {
+  scroll-behavior: smooth;
   height: 100%;
   margin: 0;
 }
@@ -109,7 +110,7 @@ header a:focus {
   border: 2px solid black;
 }
 
-.about-container {
+#about {
   display: -ms-grid;
   display: grid;
   row-gap: 20px;
@@ -119,33 +120,6 @@ header a:focus {
   grid-row: auto;
       grid-template-areas: "aboutMe myPic" "mySkills  mySkills" "schoolPic  school";
   border: 2px solid red;
-}
-
-#about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 2rem 5rem;
-  background: white;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
-  background: linear-gradient(to bottom, white 0%, black 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
-  /* IE6-9 */
-}
-
-#about .my-row {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-column: 2;
-  grid-column: 2;
 }
 
 #about-me {
@@ -292,10 +266,10 @@ header a:focus {
   .my-cards .card-description {
     font-size: 0.8rem;
   }
-  .about-container {
+  #about {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: "aboutMe"  "myPic" "mySkills" "schoolPic" "school";
+        grid-template-areas: "aboutMe" "myPic" "mySkills" "schoolPic" "school";
   }
   .item-a {
     -ms-grid-row: 1;

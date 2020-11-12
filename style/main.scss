@@ -163,46 +163,77 @@ header {
   }
 }
 
-#projects{
+#projects {
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem; 
+  padding: 1rem;
   border: 1px solid black;
 }
 
-#projects2{
+#projects2 {
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem; 
+  padding: 1rem;
   border: 1px solid black;
 }
 
-.my-card{
+.my-cards {
   width: 50%;
   padding: 1rem;
-  border: 1px solid red;
   
-  img{
+
+  img {
     width: 100%;
     height: 70%;
+    border: 1px solid black;
   }
-}
 
-
-.hidden {
-  display: none !important;
+  .card-description {
+    width: 100%;
+    height: 30%;
+    padding: 5px;
+    border: 1px solid black;
+  }
 }
 
 #contact {
   background-color: lightgray;
 }
 
-@media (min-width: 768px) {
+//to show and hide some content
+.hidden {
+  display: none !important;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
   header h1 {
     font-size: 4rem;
     line-height: 4rem;
     text-shadow: 2px 2px 12px $text-shadow;
   }
+
+  #portfolio{
+    padding: .5rem;
+  }
+
+  .my-cards {
+    width: 100%;
+    padding: .5rem 0;
+    
+    .card-description{
+      font-size: 0.8rem;
+    }
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -215,14 +246,5 @@ header {
   header h2 {
     font-size: 2rem;
     text-shadow: 0 0 10px $text-shadow;
-  }
-}
-
-@keyframes fadeOut {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }

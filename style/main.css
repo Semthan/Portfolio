@@ -183,44 +183,30 @@ header a:focus {
   border: 1px solid black;
 }
 
-.my-card {
+.my-cards {
   width: 50%;
   padding: 1rem;
-  border: 1px solid red;
 }
 
-.my-card img {
+.my-cards img {
   width: 100%;
   height: 70%;
+  border: 1px solid black;
 }
 
-.hidden {
-  display: none !important;
+.my-cards .card-description {
+  width: 100%;
+  height: 30%;
+  padding: 5px;
+  border: 1px solid black;
 }
 
 #contact {
   background-color: lightgray;
 }
 
-@media (min-width: 768px) {
-  header h1 {
-    font-size: 4rem;
-    line-height: 4rem;
-    text-shadow: 2px 2px 12px #0040ff;
-  }
-}
-
-@media (min-width: 992px) {
-  header h1 {
-    font-size: 6.5rem;
-    line-height: 6.5rem;
-    letter-spacing: 0.5rem;
-    text-shadow: 2px 2px 12px #0040ff;
-  }
-  header h2 {
-    font-size: 2rem;
-    text-shadow: 0 0 10px #0040ff;
-  }
+.hidden {
+  display: none !important;
 }
 
 @-webkit-keyframes fadeOut {
@@ -238,6 +224,37 @@ header a:focus {
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    text-shadow: 2px 2px 12px #0040ff;
+  }
+  #portfolio {
+    padding: .5rem;
+  }
+  .my-cards {
+    width: 100%;
+    padding: .5rem 0;
+  }
+  .my-cards .card-description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  header h1 {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.5rem;
+    text-shadow: 2px 2px 12px #0040ff;
+  }
+  header h2 {
+    font-size: 2rem;
+    text-shadow: 0 0 10px #0040ff;
   }
 }
 /*# sourceMappingURL=main.css.map */

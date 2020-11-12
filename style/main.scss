@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body,
 html {
   height: 100%;
@@ -24,7 +28,7 @@ $text-shadow: #0040ff;
   animation-iteration-count: 1;
 }
 
-//------|HEADER|------
+//------|HEADER|------//
 header {
   height: 100vh;
   min-height: 500px;
@@ -32,8 +36,6 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
 
   h1 {
     padding-top: 10px;
@@ -75,6 +77,47 @@ header {
   }
 }
 
+
+.item-a {
+  grid-area: aboutMe;
+  border: 2px solid black;
+}
+
+.item-b {
+  grid-area: myPic;
+  border: 2px solid black;
+}
+
+.item-c {
+  grid-area: mySkills;
+  border: 2px solid black;
+}
+
+.item-d {
+  grid-area: schoolPic;
+  border: 2px solid black;
+}
+
+.item-e {
+  grid-area: school;
+  border: 2px solid black;
+}
+
+.about-container {
+  display: grid;
+  row-gap: 20px;
+  padding: 2rem 5rem;
+  grid-template-columns: 50% 50%;
+  grid-row: auto;
+  grid-template-areas:
+    "aboutMe myPic"
+    "mySkills  mySkills"
+    "schoolPic  school";
+  border: 2px solid red;
+}
+
+
+//------|About Section|------//
 #about {
   display: flex;
   flex-direction: column;
@@ -98,7 +141,8 @@ header {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 
   .my-row {
-    display: flex;
+    display: grid;
+    grid-column: 2;
   }
 }
 
@@ -179,19 +223,17 @@ header {
 
 .my-cards {
   width: 50%;
-  padding: .5rem;
+  padding: 0.5rem;
 
-  &:hover{
+  &:hover {
     background-color: gray;
-    transition: all 0.6s ease ;
-  
+    transition: all 0.6s ease;
   }
 
   img {
     width: 100%;
     height: 70%;
     border: 1px solid black;
-
   }
 
   .card-description {
@@ -200,7 +242,6 @@ header {
     padding: 5px;
     border: 1px solid black;
   }
-  
 }
 
 #contact {
@@ -228,17 +269,43 @@ header {
     text-shadow: 2px 2px 12px $text-shadow;
   }
 
-  #portfolio{
-    padding: .5rem;
+  #portfolio {
+    padding: 0.5rem;
   }
 
   .my-cards {
     width: 100%;
-    padding: .5rem 0;
-    
-    .card-description{
+    padding: 0.5rem 0;
+
+    .card-description {
       font-size: 0.8rem;
     }
+  }
+  
+  .about-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "aboutMe" 
+      "myPic"
+      "mySkills"
+      "schoolPic"
+      "school";
+  }
+
+  .item-a {
+    grid-area: aboutMe;
+  }
+  .item-b {
+    grid-area: myPic;
+  }
+  .item-c {
+    grid-area: mySkills;
+  }
+  .item-d {
+    grid-area: schoolPic;
+  }
+  .item-e {
+    grid-area: school;
   }
 
 }

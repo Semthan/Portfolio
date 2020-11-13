@@ -147,14 +147,12 @@ header a:focus {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: aboutMe;
-  border: 2px solid black;
 }
 
 .item-b {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: myPic;
-  border: 2px solid black;
 }
 
 .item-c {
@@ -162,21 +160,18 @@ header a:focus {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: mySkills;
-  border: 2px solid black;
 }
 
 .item-d {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: schoolPic;
-  border: 2px solid black;
 }
 
 .item-e {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: school;
-  border: 2px solid black;
 }
 
 #about-me {

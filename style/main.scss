@@ -11,6 +11,7 @@ html {
 
 $text-shadow: #0040ff;
 
+//------|mixin|------\\
 @mixin border-theme {
   border-color: white;
   box-shadow: 0 0 10px $text-shadow;
@@ -86,7 +87,9 @@ $text-shadow: #0040ff;
     grid-area: school;
   }
 }
+//------|mixin|------\\
 
+//------|Navbar|------\\
 .overlay {
   height: 100%;
   width: 0;
@@ -134,8 +137,9 @@ $text-shadow: #0040ff;
   font-size: 3rem;
   cursor: pointer;
 }
+//------|Navbar|------\\
 
-//------|HEADER|------//
+//------|Header|------\\
 header {
   height: 100vh;
   min-height: 500px;
@@ -183,7 +187,9 @@ header {
     }
   }
 }
+//------|Header|------\\
 
+//------|About Section|------\\
 #about {
   display: grid;
   row-gap: 20px;
@@ -199,30 +205,24 @@ header {
 
 .item-a {
   grid-area: aboutMe;
-  border: 2px solid black;
 }
 
 .item-b {
   grid-area: myPic;
-  border: 2px solid black;
 }
 
 .item-c {
   grid-area: mySkills;
-  border: 2px solid black;
 }
 
 .item-d {
   grid-area: schoolPic;
-  border: 2px solid black;
 }
 
 .item-e {
   grid-area: school;
-  border: 2px solid black;
 }
 
-//------|About Section|------//
 
 #about-me {
   display: flex;
@@ -249,7 +249,9 @@ header {
     border-radius: 50%;
   }
 }
+//------|About Section|------\\
 
+//------|portfolio Section|------\\
 #portfolio {
   display: flex;
   flex-direction: column;
@@ -325,16 +327,20 @@ header {
     background-color: whitesmoke;
   }
 }
+//------|portfolio Section|------\\
 
+//------|contact Section|------\\
 #contact {
   @include light2Dark();
 }
+//------|contact Section|------\\
 
 //to show and hide some content
 .hidden {
   display: none !important;
 }
 
+//------|Animations|------\\
 @keyframes fadeOut {
   from {
     opacity: 0;
@@ -361,7 +367,9 @@ header {
     transform: scale(1);
   }
 }
+//------|Animations|------\\
 
+//------|Mobile layout|------\\
 @media (max-width: 768px) {
   .overlay {
     a {
@@ -408,7 +416,9 @@ header {
   }
   @include gridAreas();
 }
+//------|Mobile layout|------\\
 
+//------|large screen layout|------\\
 @media (min-width: 992px) {
   .overlay {
     a {
@@ -427,3 +437,4 @@ header {
     text-shadow: 0 0 10px $text-shadow;
   }
 }
+//------|large screen layout|------\\

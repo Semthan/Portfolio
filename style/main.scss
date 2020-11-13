@@ -29,6 +29,27 @@ $text-shadow: #0040ff;
   animation-iteration-count: 1;
 }
 
+@mixin dark2Light {
+  background: rgb(0, 0, 0); /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+  
+}
+
 @mixin gridAreas {
   .item-a {
     grid-area: aboutMe;
@@ -172,7 +193,7 @@ header {
 #about {
   display: grid;
   row-gap: 20px;
-  padding: 2rem 5rem;
+  padding: 2rem 4rem;
   grid-template-columns: 50% 50%;
   grid-row: auto;
   grid-template-areas:
@@ -199,24 +220,12 @@ header {
 #portfolio {
   display: flex;
   flex-direction: column;
-  padding: 2rem 5rem;
-  // background: rgb(0, 0, 0); /* Old browsers */
-  // background: -moz-linear-gradient(
-  //   top,
-  //   rgba(0, 0, 0, 1) 0%,
-  //   rgba(255, 255, 255, 1) 100%
-  // ); /* FF3.6-15 */
-  // background: -webkit-linear-gradient(
-  //   top,
-  //   rgba(0, 0, 0, 1) 0%,
-  //   rgba(255, 255, 255, 1) 100%
-  // ); /* Chrome10-25,Safari5.1-6 */
-  // background: linear-gradient(
-  //   to bottom,
-  //   rgba(0, 0, 0, 1) 0%,
-  //   rgba(255, 255, 255, 1) 100%
-  // ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+  padding: 2rem 4rem;
+  @include dark2Light();
+
+  h1{
+    color: white;
+  }
 }
 
 #projects-menu {
@@ -264,21 +273,21 @@ header {
   padding: 0.5rem;
 
   &:hover {
-    background-color: gray;
+    @include border-theme();
     transition: all 0.6s ease;
   }
 
   img {
     width: 100%;
     height: 70%;
-    border: 1px solid black;
+    border: 1px solid white;
   }
 
   .card-description {
     width: 100%;
     height: 30%;
     padding: 5px;
-    border: 1px solid black;
+    border: 1px solid white;
   }
 }
 

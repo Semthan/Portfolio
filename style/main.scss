@@ -306,7 +306,7 @@ header {
 .my-cards {
   width: 50%;
   padding: 0.5rem;
-  animation: move 1s ease-in-out;
+  animation: zoomOut 1s ease-in-out;
 
   &:hover {
     @include border-theme();
@@ -359,7 +359,7 @@ header {
   }
 }
 
-@keyframes move {
+@keyframes zoomOut {
   from {
     transform: scale(0.5);
   }

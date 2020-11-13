@@ -132,7 +132,6 @@ header a:focus {
       grid-template-columns: 50% 50%;
   grid-row: auto;
       grid-template-areas: "aboutMe myPic" "mySkills  mySkills" "schoolPic  school";
-  border: 2px solid red;
   background: white;
   /* Old browsers */
   /* FF3.6-15 */
@@ -238,7 +237,7 @@ header a:focus {
   /* IE6-9 */
 }
 
-#portfolio h1 {
+#portfolio h1, #portfolio hr {
   color: white;
 }
 
@@ -317,6 +316,7 @@ header a:focus {
   height: 30%;
   padding: 5px;
   border: 1px solid white;
+  background-color: whitesmoke;
 }
 
 #contact {

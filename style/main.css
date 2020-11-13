@@ -196,6 +196,10 @@ header a:focus {
   -webkit-box-shadow: 0 0 10px #0040ff;
           box-shadow: 0 0 10px #0040ff;
   border-radius: 50%;
+  -webkit-animation-name: rightSlide;
+          animation-name: rightSlide;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 #about-school {
@@ -237,7 +241,8 @@ header a:focus {
   /* IE6-9 */
 }
 
-#portfolio h1, #portfolio hr {
+#portfolio h1,
+#portfolio hr {
   color: white;
 }
 
@@ -279,7 +284,6 @@ header a:focus {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 1rem;
-  border: 1px solid black;
 }
 
 #projects2 {
@@ -289,12 +293,13 @@ header a:focus {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 1rem;
-  border: 1px solid black;
 }
 
 .my-cards {
   width: 50%;
   padding: 0.5rem;
+  -webkit-animation: move 1s ease-in-out;
+          animation: move 1s ease-in-out;
 }
 
 .my-cards:hover {
@@ -350,6 +355,50 @@ header a:focus {
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes rightSlide {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes rightSlide {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes move {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 

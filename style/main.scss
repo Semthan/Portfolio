@@ -46,16 +46,27 @@ $text-shadow: #0040ff;
     rgba(0, 0, 0, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */ 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 
 @mixin light2Dark {
-  background: rgb(255,255,255); /* Old browsers */
-  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */  
-  
+  background: rgb(255, 255, 255); /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
 
 @mixin gridAreas {
@@ -211,7 +222,6 @@ header {
   border: 2px solid black;
 }
 
-
 //------|About Section|------//
 
 #about-me {
@@ -223,10 +233,12 @@ header {
     justify-self: center;
     @include border-theme();
     border-radius: 50%;
+    animation-name: rightSlide;
+    animation-duration: 1s;
   }
 }
 
-#about-school{
+#about-school {
   display: flex;
   justify-content: center;
 
@@ -244,7 +256,8 @@ header {
   padding: 2rem 4rem;
   @include dark2Light();
 
-  h1,hr{
+  h1,
+  hr {
     color: white;
   }
 }
@@ -280,19 +293,18 @@ header {
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
-  border: 1px solid black;
 }
 
 #projects2 {
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
-  border: 1px solid black;
 }
 
 .my-cards {
   width: 50%;
   padding: 0.5rem;
+  animation: move 1s ease-in-out;
 
   &:hover {
     @include border-theme();
@@ -332,6 +344,24 @@ header {
   }
 }
 
+@keyframes rightSlide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes move {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 @media (max-width: 768px) {
   .overlay {
     a {
@@ -350,7 +380,7 @@ header {
     text-shadow: 2px 2px 12px $text-shadow;
   }
 
-  #about{
+  #about {
     padding: 1rem;
   }
 

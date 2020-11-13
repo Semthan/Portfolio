@@ -10,6 +10,55 @@ html {
   margin: 0;
 }
 
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 6rem;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 3rem;
+  color: #818181;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#nav-btn {
+  color: #e6e6e6;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
 header {
   height: 100vh;
   min-height: 500px;
@@ -251,6 +300,14 @@ header a:focus {
 }
 
 @media (max-width: 768px) {
+  .overlay a {
+    font-size: 4rem;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
   header h1 {
     font-size: 4rem;
     line-height: 4rem;
@@ -299,6 +356,9 @@ header a:focus {
 }
 
 @media (min-width: 992px) {
+  .overlay a {
+    font-size: 6rem;
+  }
   header h1 {
     font-size: 6.5rem;
     line-height: 6.5rem;

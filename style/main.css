@@ -123,6 +123,27 @@ header a:focus {
   background-color: white;
 }
 
+#about {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 20px;
+  padding: 2rem 4rem;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  grid-row: auto;
+      grid-template-areas: "aboutMe myPic" "mySkills  mySkills" "schoolPic  school";
+  border: 2px solid red;
+  background: white;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+  background: linear-gradient(to bottom, white 0%, black 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
+}
+
 .item-a {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -159,18 +180,6 @@ header a:focus {
   border: 2px solid black;
 }
 
-#about {
-  display: -ms-grid;
-  display: grid;
-  row-gap: 20px;
-  padding: 2rem 4rem;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-  grid-row: auto;
-      grid-template-areas: "aboutMe myPic" "mySkills  mySkills" "schoolPic  school";
-  border: 2px solid red;
-}
-
 #about-me {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,7 +193,28 @@ header a:focus {
   width: 40%;
   -ms-grid-column-align: center;
       justify-self: center;
-  border: 2px solid black;
+  border-color: white;
+  -webkit-box-shadow: 0 0 10px #0040ff;
+          box-shadow: 0 0 10px #0040ff;
+  border-radius: 50%;
+}
+
+#about-school {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about-school img {
+  width: 60%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border-color: white;
+  -webkit-box-shadow: 0 0 10px #0040ff;
+          box-shadow: 0 0 10px #0040ff;
   border-radius: 50%;
 }
 
@@ -224,6 +254,7 @@ header a:focus {
 #projects-menu button {
   padding: 10px;
   margin: 2px;
+  color: whitesmoke;
   border: 0;
   border-radius: 5%;
   color: black;
@@ -289,7 +320,15 @@ header a:focus {
 }
 
 #contact {
-  background-color: lightgray;
+  background: white;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+  background: linear-gradient(to bottom, white 0%, black 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
 }
 
 .hidden {
@@ -327,6 +366,9 @@ header a:focus {
     font-size: 4rem;
     line-height: 4rem;
     text-shadow: 2px 2px 12px #0040ff;
+  }
+  #about {
+    padding: 1rem;
   }
   #portfolio {
     padding: 0.5rem;

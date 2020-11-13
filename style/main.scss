@@ -46,7 +46,15 @@ $text-shadow: #0040ff;
     rgba(0, 0, 0, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */ 
+}
+
+@mixin light2Dark {
+  background: rgb(255,255,255); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */  
   
 }
 
@@ -165,6 +173,20 @@ header {
   }
 }
 
+#about {
+  display: grid;
+  row-gap: 20px;
+  padding: 2rem 4rem;
+  grid-template-columns: 50% 50%;
+  grid-row: auto;
+  grid-template-areas:
+    "aboutMe myPic"
+    "mySkills  mySkills"
+    "schoolPic  school";
+  border: 2px solid red;
+  @include light2Dark();
+}
+
 .item-a {
   grid-area: aboutMe;
   border: 2px solid black;
@@ -190,18 +212,6 @@ header {
   border: 2px solid black;
 }
 
-#about {
-  display: grid;
-  row-gap: 20px;
-  padding: 2rem 4rem;
-  grid-template-columns: 50% 50%;
-  grid-row: auto;
-  grid-template-areas:
-    "aboutMe myPic"
-    "mySkills  mySkills"
-    "schoolPic  school";
-  border: 2px solid red;
-}
 
 //------|About Section|------//
 
@@ -212,7 +222,19 @@ header {
   img {
     width: 40%;
     justify-self: center;
-    border: 2px solid black;
+    @include border-theme();
+    border-radius: 50%;
+  }
+}
+
+#about-school{
+  display: flex;
+  justify-content: center;
+
+  img {
+    width: 60%;
+    justify-self: center;
+    @include border-theme();
     border-radius: 50%;
   }
 }
@@ -235,6 +257,7 @@ header {
   button {
     padding: 10px;
     margin: 2px;
+    color: whitesmoke;
     border: 0;
     border-radius: 5%;
     color: black;
@@ -292,7 +315,7 @@ header {
 }
 
 #contact {
-  background-color: lightgray;
+  @include light2Dark();
 }
 
 //to show and hide some content
@@ -327,6 +350,10 @@ header {
     text-shadow: 2px 2px 12px $text-shadow;
   }
 
+  #about{
+    padding: 1rem;
+  }
+
   #portfolio {
     padding: 0.5rem;
   }
@@ -349,7 +376,6 @@ header {
       "schoolPic"
       "school";
   }
-
   @include gridAreas();
 }
 

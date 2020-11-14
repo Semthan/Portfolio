@@ -266,26 +266,19 @@ header {
 #projects-menu {
   display: flex;
   justify-content: center;
+  gap: 10px;
 
   button {
     padding: 10px;
     margin: 2px;
-    color: whitesmoke;
-    border: 0;
-    border-radius: 5%;
-    color: black;
+    border: none;
+    color: wheat;
+    font-size: 1.5rem;
     background-color: transparent;
 
     &:hover {
-      background-color: white;
-    }
-
-    &:focus {
-      background-color: white;
-    }
-
-    &:active {
-      background-color: white;
+      @include border-theme();
+      background-color: whitesmoke;
     }
   }
 }
@@ -293,19 +286,21 @@ header {
 #projects {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
   padding: 1rem;
 }
 
 #projects2 {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
   padding: 1rem;
 }
 
 .my-cards {
-  width: 50%;
-  padding: 0.5rem;
-  animation: zoomOut 1s ease-in-out;
+  width: 30%;
+  animation: zoomOut 0.8s ease-in-out;
 
   &:hover {
     @include border-theme();

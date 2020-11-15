@@ -151,20 +151,20 @@ header {
   h1 {
     padding-top: 10px;
     font-weight: 700;
+    color: whitesmoke;
     text-transform: uppercase;
     font-family: "Varela Round";
     font-size: 2.5rem;
     line-height: 2.5rem;
     letter-spacing: 0.8rem;
-    text-shadow: 2px 2px 8px $text-shadow;
     @include fadeOut();
   }
 
   h2 {
     font-size: 1.25rem;
     font-weight: 900;
+    color: whitesmoke;
     font-family: "Times New Roman", Times, serif;
-    text-shadow: 0 0 8px $text-shadow;
     @include fadeOut();
   }
 
@@ -453,11 +453,9 @@ header {
     font-size: 6.5rem;
     line-height: 6.5rem;
     letter-spacing: 0.5rem;
-    text-shadow: 2px 2px 12px $text-shadow;
   }
   header h2 {
     font-size: 2rem;
-    text-shadow: 0 0 10px $text-shadow;
   }
 }
 //------|large screen layout|------\\

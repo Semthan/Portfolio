@@ -284,12 +284,19 @@ header {
   button {
     padding: 10px;
     margin: 2px;
-    border: none;
-    color: wheat;
+    border: 0;
+    color: white;
     font-size: 1.5rem;
     background-color: transparent;
 
     &:hover {
+      color: black;
+      @include border-theme();
+      background-color: whitesmoke;
+    }
+
+    &:focus{
+      color: black;
       @include border-theme();
       background-color: whitesmoke;
     }

@@ -131,7 +131,7 @@ header a:focus {
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
   grid-row: auto;
-      grid-template-areas: "aboutMe myPic" "mySkills  mySkills" "schoolPic  school";
+      grid-template-areas: "aboutMe myPic" "mySkills  mySkills" "school schoolPic";
   background: white;
   /* Old browsers */
   /* FF3.6-15 */
@@ -164,13 +164,13 @@ header a:focus {
 
 .item-d {
   -ms-grid-row: 3;
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   grid-area: schoolPic;
 }
 
 .item-e {
   -ms-grid-row: 3;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   grid-area: school;
 }
 
@@ -217,6 +217,7 @@ header a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 1rem;
 }
 
 #about-school img {
@@ -445,15 +446,15 @@ header a:focus {
   #about {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-        grid-template-areas: "aboutMe" "myPic" "mySkills" "schoolPic" "school";
+        grid-template-areas: "myPic" "aboutMe" "mySkills" "school" "schoolPic";
   }
   .item-a {
-    -ms-grid-row: 1;
+    -ms-grid-row: 2;
     -ms-grid-column: 1;
     grid-area: aboutMe;
   }
   .item-b {
-    -ms-grid-row: 2;
+    -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: myPic;
   }
@@ -463,12 +464,12 @@ header a:focus {
     grid-area: mySkills;
   }
   .item-d {
-    -ms-grid-row: 4;
+    -ms-grid-row: 5;
     -ms-grid-column: 1;
     grid-area: schoolPic;
   }
   .item-e {
-    -ms-grid-row: 5;
+    -ms-grid-row: 4;
     -ms-grid-column: 1;
     grid-area: school;
   }

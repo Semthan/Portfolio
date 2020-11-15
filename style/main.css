@@ -197,6 +197,19 @@ header a:focus {
           animation-duration: 1s;
 }
 
+#about-skills div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+}
+
+#about-skills div img {
+  width: 5%;
+}
+
 #about-school {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -207,13 +220,13 @@ header a:focus {
 }
 
 #about-school img {
-  width: 60%;
+  width: 90%;
   -ms-grid-column-align: center;
       justify-self: center;
   border-color: white;
   -webkit-box-shadow: 0 0 10px #0040ff;
           box-shadow: 0 0 10px #0040ff;
-  border-radius: 50%;
+  border-radius: 5%;
 }
 
 #portfolio {
@@ -415,6 +428,9 @@ header a:focus {
   }
   #about {
     padding: 1rem;
+  }
+  #about-skills div img {
+    width: 10%;
   }
   #portfolio {
     padding: 0.5rem;

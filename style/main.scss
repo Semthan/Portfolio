@@ -237,15 +237,29 @@ header {
   }
 }
 
+#about-skills{
+  div{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+
+    img{
+      width: 5%;
+     
+    }
+  }
+
+}
+
 #about-school {
   display: flex;
   justify-content: center;
 
   img {
-    width: 60%;
+    width: 90%;
     justify-self: center;
     @include border-theme();
-    border-radius: 50%;
+    border-radius: 5%;
   }
 }
 //------|About Section|------\\
@@ -385,6 +399,14 @@ header {
 
   #about {
     padding: 1rem;
+  }
+
+  #about-skills{
+    div{
+      img{
+        width: 10%;
+      }
+    }
   }
 
   #portfolio {

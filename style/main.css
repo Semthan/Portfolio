@@ -62,7 +62,7 @@ html {
 header {
   height: 100vh;
   min-height: 500px;
-  background-image: url("../media/hero.jpg");
+  background-color: gray;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -1,0 +1,87 @@
+---------------------------------------------------------------------------------
+Scrum
+---------------------------------------------------------------------------------
+
+Scrum är ett ramverk som tillämpar agila arbetssättet, arbetet sker på effektivare sätt genom att dela upp arbetet i små delmål
+och i korta iterationer som kallas för Sprinter.
+
+Scrum består av olika delar
+
+-Product backlog
+Är en “att göra” lista med önskemål prioriteringar.
+
+-Sprint backlog
+En del av product backlog, användas av utvecklingsteamet
+
+-Sprint
+
+
+-Daily scrum
+
+
+-Sprint review
+
+
+-Sprint retrospective
+
+
+-Sprint planning
+
+
+I varje scrum team så finns det
+
+Product owner
+-Är den personen som äger produkten, lägger till prioriterade önskemål i backloggen.
+
+Scrum master
+-En person som tar ansvar för utvecklingsteamet, ser att projektet följer scrum regler.
+ 
+Development team 
+-Alla projektmedlemmarna, kan bestå av 5-9 personer.
+
+---------------------------------------------------------------------------------
+Grafisk profil
+---------------------------------------------------------------------------------
+
+En grafisk profil hos företag eller organisation beskriver hur grafisk kommunikation ska se ut.
+
+I en grafisk profil ingår tre grundläggande delar:
+
+-Logotyp
+-Färgshemma
+-Typsnitt
+
+Att ha grafisk profil kan underlätta för både mottagaren och själva företaget/organisationen genom att ha tydlighet identitet
+och igenkänning, men det kan skapa vissa problem mellan designer och företagets ägare. 
+tex en slarvig grafisk profil som skapas av okunnig person som kan leda till dålig design av produkt då kan det skapas konflikter 
+mellan produktdesigner och personen som skapade grafiska profilen. 
+
+
+---------------------------------------------------------------------------------
+Tillgänglighet  
+---------------------------------------------------------------------------------
+
+Tillgänglighet är regler för att göra tex webbsida/app kan användas av alla oavsett hur användarens funktioner och begränsningar,
+det kan vara personer med funktionsnedsättning.
+
+Tillgänglighet har mer fördelar än nackdelar, som jag har nämnt tidigare att det är bra för att tjänsten kan vara tillgänglig för alla, 
+men det kan skapa vissa problem och begränsa friheten för designer som designar en webbplats, jag tar mig själv som ett exempel, 
+när jag skulle implementera några tillgängligheten, var jag tvungen att ändra på designen för att uppfylla kraven för vissa tillgänglighet. 
+
+
+Tillgänglighet som jag har
+
+1.1.1 (A) Beskriv med text allt innehållet som är inte text.
+-Jag har gjort så att alla bilder har en beskrivning med hjälp av “alt” attributet.
+
+1.3.1 (A) Ange i kod vad sidans olika delar har för roll
+-Alla HTML5 taggar används på rätt sätt.
+1.3.4 (AA) Se till att allt innehåll presenteras rätt oavsett skärmens riktning.
+-Sidans innehåll visas på rätt sätt oavsett hur skärmens storlek är eller skärmens läge.
+
+3.1.1 (A)  Ange sidans språk i koden.
+-Jag har angett hemsidans språk i “lang”attributet.
+
+
+
+

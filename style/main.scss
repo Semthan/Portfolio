@@ -143,7 +143,7 @@ $text-shadow: #0040ff;
 header {
   height: 100vh;
   min-height: 500px;
-  //background-image: url("../media/hero.jpg"); 
+  //background-image: url("../media/hero.jpg");
   background-color: gray;
   background-position: center;
   background-repeat: no-repeat;
@@ -296,7 +296,7 @@ header {
       background-color: whitesmoke;
     }
 
-    &:focus{
+    &:focus {
       color: black;
       @include border-theme();
       background-color: whitesmoke;
@@ -321,7 +321,9 @@ header {
 }
 
 .my-cards {
+  //border: 1px solid black;
   width: 30%;
+  //background-color: whitesmoke;
   animation: zoomOut 0.8s ease-in-out;
 
   &:hover {
@@ -337,10 +339,14 @@ header {
 
   .card-description {
     width: 100%;
-    height: 30%;
+    //height: 30%;
     padding: 10px;
-    border: 1px solid white;
+    //border: 1px solid black;
     background-color: whitesmoke;
+
+    a {
+      text-decoration: none;
+    }
   }
 }
 //------|portfolio Section|------\\
@@ -422,7 +428,8 @@ header {
 
   .my-cards {
     width: 100%;
-    padding: 0.5rem 0;
+    //padding: 5rem 0;
+    margin: auto;
 
     .card-description {
       font-size: 0.8rem;
@@ -436,7 +443,7 @@ header {
       "aboutMe"
       "mySkills"
       "school"
-      "schoolPic"   
+      "schoolPic";
   }
   @include gridAreas();
 }

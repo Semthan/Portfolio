@@ -338,10 +338,12 @@ header a:focus {
 
 .my-cards .card-description {
   width: 100%;
-  height: 30%;
   padding: 10px;
-  border: 1px solid white;
   background-color: whitesmoke;
+}
+
+.my-cards .card-description a {
+  text-decoration: none;
 }
 
 #contact {
@@ -447,7 +449,7 @@ header a:focus {
   }
   .my-cards {
     width: 100%;
-    padding: 0.5rem 0;
+    margin: auto;
   }
   .my-cards .card-description {
     font-size: 0.8rem;

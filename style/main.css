@@ -361,10 +361,17 @@ header a:focus {
   background-color: whitesmoke;
 }
 
-.my-cards .card-footer button {
+.my-cards .card-footer a.button {
   margin: 5px;
   padding: 5px;
-  border-radius: 5%;
+  border-radius: 5px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(16%, #cfcfcf), color-stop(79%, #fcfcfc));
+  background-image: linear-gradient(to top, #cfcfcf 16%, #fcfcfc 79%);
+  border: 1px solid lightgray;
+  -webkit-box-shadow: 2px 2px 2px #818181;
+          box-shadow: 2px 2px 2px #818181;
+  color: black;
+  text-decoration: none;
 }
 
 #contact {

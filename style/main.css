@@ -102,7 +102,7 @@ header h2 {
           animation-iteration-count: 1;
 }
 
-header a {
+header .h-title {
   padding: 1.25rem 2rem;
   text-transform: uppercase;
   font-size: 1.25rem;
@@ -115,11 +115,11 @@ header a {
           box-shadow: 0 0 10px #0040ff;
 }
 
-header a:hover {
+header .h-title:hover {
   background-color: white;
 }
 
-header a:focus {
+header .h-title:focus {
   background-color: white;
 }
 
@@ -303,13 +303,6 @@ header a:focus {
   padding: 1rem;
 }
 
-/* #projects2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  padding: 1rem;
-} */
 .my-cards {
   width: 30%;
   -webkit-animation: zoomOut 0.8s ease-in-out;

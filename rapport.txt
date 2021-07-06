@@ -1,0 +1,99 @@
+---------------------------------------------------------------------------------
+Scrum
+---------------------------------------------------------------------------------
+
+Scrum är ett ramverk som tillämpar agila arbetssättet, arbetet sker på effektivare sätt genom att dela upp arbetet i små delmål och i korta iterationer som kallas för Sprinter.
+
+Fördelar med scrum är att det mer effektiv arbetssätt genom att ha korta sprinter, nackdelar kan vara att det blir lite jobbigt med daglig scrum
+
+Scrum består av olika delar
+
+-Product backlog
+Är en “att göra” lista med önskemål prioriteringar, produkt ägaren som tar ansvar.
+
+-Sprint backlog
+En del av product backlog, användas av utvecklingsteamet för att komplettera backloggen genom att bryta ned i mindre delmål.
+
+-Sprint
+Scrum bygger på att dela arbetet i korta sprinter(perioder), det kan vara mellan 3-30 dagar.
+
+-Daily scrum
+Ett dagligt möte mellan utvecklingsteamet för att se hur arbetet har gått till, tre frågor måste besvaras.
+Vad har jag gjort sedan igår?
+Vad ska jag åstadkomma till imorgon?
+Vad hindrar mig?
+
+
+-Sprint review
+Ett möte sker i slutet av nuvarande sprint, där alla deltagare ska vara med för att gå genom demonstrera arbetet.
+
+
+
+-Sprint retrospective
+Ett möte mellan utvecklingsteamet, scrum mästaren och produktägaren för att se hur har sprintet gått, genom att diskutera vad som vad bra eller mindre bra och hur att förbättra det till nästa sprint.
+
+
+-Sprint planning
+När ett sprint är klar då är det dags att planera för ett nytt sprint
+
+I varje scrum team så finns det
+
+Product owner
+-Är den personen som äger produkten, lägger till prioriterade önskemål i backloggen.
+
+Scrum master
+-En person som tar ansvar för utvecklingsteamet, ser att projektet följer scrum regler.
+ 
+Development team 
+-Alla projektmedlemmarna, kan bestå av 5-9 personer.
+
+---------------------------------------------------------------------------------
+Grafisk profil
+---------------------------------------------------------------------------------
+
+En grafisk profil hos företag eller organisation beskriver hur grafisk kommunikation ska se ut.
+
+I en grafisk profil ingår tre grundläggande delar:
+
+-Logotyp
+-Färgshemma
+-Typsnitt
+
+Att ha grafisk profil kan underlätta för både mottagaren och själva företaget/organisationen genom att ha tydlighet identitet och igenkänning, men det kan skapa vissa problem mellan designer och företagets ägare, tex en slarvig grafisk profil som skapas av okunnig person som kan leda till dålig design av produkt då kan det skapas konflikter mellan produktdesigner och personen som skapade grafiska profilen. 
+
+
+---------------------------------------------------------------------------------
+Tillgänglighet  
+---------------------------------------------------------------------------------
+
+Tillgänglighet är regler för att göra tex webbsida/app kan användas av alla oavsett hur användarens funktioner och begränsningar , det kan vara personer med funktionsnedsättning.
+
+Tillgänglighet har mer fördelar än nackdelar, som jag har nämnt tidigare att det är bra för att tjänsten kan vara tillgänglig för alla, men det kan skapa vissa problem och begränsa friheten för designer som designar en webbplats, jag tar mig själv som ett exempel, när jag skulle implementera några tillgängligheten, var jag tvungen att ändra på designen för att uppfylla kraven för vissa tillgänglighet. 
+
+
+Tillgänglighet som jag har
+
+1.1.1 (A) Beskriv med text allt innehållet som är inte text.
+-Jag har gjort så att alla bilder har en beskrivning med hjälp av “alt” attributet.
+
+1.3.1 (A) Ange i kod vad sidans olika delar har för roll
+-Alla HTML5 taggar används på rätt sätt.
+
+1.3.4 (AA) Se till att allt innehåll presenteras rätt oavsett skärmens riktning.
+-Sidans innehåll visas på rätt sätt oavsett hur skärmens storlek är eller skärmens läge.
+
+1.4.10 (AA)  Skapa en flexibel layout som fungerar vid förstoring eller liten skärm.
+-Jag har gjort så att layout är flexibel genom att ha responsivt layout.
+
+1.3.4 (AA) Se till att allt innehåll presenteras rätt oavsett skärmens riktning.
+-Sidans innehåll visas på rätt sätt oavsett hur skärmens storlek är eller skärmens läge.
+
+
+1.4.3 (AA) Använd tillräcklig kontrast mellan text och bakgrund
+-Jag har gjort så mycket för undvika höga kontraster, jag tog bort headerns bakgrunden bild och la färg istället.
+
+1.4.11 (AA) Använd tillräckliga kontraster i komponenter och grafik.
+-Jag har tillräckligt med kontraster
+
+3.1.1 (A)  Ange sidans språk i koden.
+-Jag har angett hemsidans språk i “lang”attributet.

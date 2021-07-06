@@ -1,0 +1,517 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 6rem;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 3rem;
+  color: #818181;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#nav-btn {
+  color: black;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+header {
+  height: 100vh;
+  min-height: 500px;
+  background-color: gray;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header h1 {
+  padding-top: 10px;
+  font-weight: 700;
+  color: whitesmoke;
+  text-transform: uppercase;
+  font-family: "Varela Round";
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  -webkit-animation: fadeOut;
+          animation: fadeOut;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+header h2 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: whitesmoke;
+  font-family: "Times New Roman", Times, serif;
+  -webkit-animation: fadeOut;
+          animation: fadeOut;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+header .h-title {
+  padding: 1.25rem 2rem;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  color: black;
+  font-family: "Varela Round";
+  text-decoration: none;
+  background-color: #e6e6e6;
+  border-color: white;
+  -webkit-box-shadow: 0 0 10px #0040ff;
+          box-shadow: 0 0 10px #0040ff;
+}
+
+header .h-title:hover {
+  background-color: white;
+}
+
+header .h-title:focus {
+  background-color: white;
+}
+
+#about {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 20px;
+  padding: 2rem 4rem;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  grid-row: auto;
+      grid-template-areas: "aboutMe myPic" "mySkills  mySkills" "school schoolPic";
+  background: white;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+  background: linear-gradient(to bottom, white 0%, black 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
+}
+
+.item-a {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: aboutMe;
+}
+
+.item-b {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: myPic;
+}
+
+.item-c {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: mySkills;
+}
+
+.item-d {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: schoolPic;
+}
+
+.item-e {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: school;
+}
+
+#about-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#about-me img {
+  width: 40%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border-color: white;
+  -webkit-box-shadow: 0 0 10px #0040ff;
+          box-shadow: 0 0 10px #0040ff;
+  border-radius: 50%;
+  -webkit-animation-name: rightSlide;
+          animation-name: rightSlide;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+#about-skills div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px;
+}
+
+#about-skills div img {
+  width: 5%;
+}
+
+#about-school {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem;
+}
+
+#about-school img {
+  width: 90%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  border-color: white;
+  -webkit-box-shadow: 0 0 10px #0040ff;
+          box-shadow: 0 0 10px #0040ff;
+  border-radius: 5%;
+}
+
+#portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem 4rem;
+  background: black;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(white));
+  background: linear-gradient(to bottom, black 0%, white 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */
+}
+
+#portfolio h1,
+#portfolio hr {
+  color: white;
+}
+
+#projects-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+#projects-menu button {
+  padding: 10px;
+  margin: 2px;
+  border: 0;
+  color: white;
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+
+#projects-menu button:hover {
+  color: black;
+  border-color: white;
+  -webkit-box-shadow: 0 0 10px #0040ff;
+          box-shadow: 0 0 10px #0040ff;
+  background-color: whitesmoke;
+}
+
+#projects-menu button:focus {
+  color: black;
+  border-color: white;
+  -webkit-box-shadow: 0 0 10px #0040ff;
+          box-shadow: 0 0 10px #0040ff;
+  background-color: whitesmoke;
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.my-cards {
+  width: 30%;
+  -webkit-animation: zoomOut 0.8s ease-in-out;
+          animation: zoomOut 0.8s ease-in-out;
+}
+
+.my-cards:hover {
+  border-color: white;
+  -webkit-box-shadow: 0 0 10px #0040ff;
+          box-shadow: 0 0 10px #0040ff;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.my-cards img {
+  width: 100%;
+  height: 60%;
+  border: 1px solid white;
+}
+
+.my-cards .card-description {
+  width: 100%;
+  height: 30%;
+  padding: 10px;
+  background-color: whitesmoke;
+}
+
+.my-cards .card-description a {
+  text-decoration: none;
+}
+
+.my-cards .card-footer {
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: whitesmoke;
+}
+
+.my-cards .card-footer a.button {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(16%, #cfcfcf), color-stop(79%, #fcfcfc));
+  background-image: linear-gradient(to top, #cfcfcf 16%, #fcfcfc 79%);
+  border: 1px solid lightgray;
+  -webkit-box-shadow: 2px 2px 2px #818181;
+          box-shadow: 2px 2px 2px #818181;
+  color: black;
+  text-decoration: none;
+}
+
+#contact {
+  background: white;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+  background: linear-gradient(to bottom, white 0%, black 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
+}
+
+.hidden {
+  display: none !important;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes rightSlide {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes rightSlide {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes zoomOut {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay a {
+    font-size: 4rem;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+  header h1 {
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-shadow: 2px 2px 12px #0040ff;
+  }
+  #about {
+    padding: 1rem;
+  }
+  #about-skills div img {
+    width: 10%;
+  }
+  #portfolio {
+    padding: 0.5rem;
+  }
+  .my-cards {
+    width: 100%;
+    margin: auto;
+  }
+  .my-cards .card-description {
+    font-size: 0.8rem;
+  }
+  #about {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "myPic" "aboutMe" "mySkills" "school" "schoolPic";
+  }
+  .item-a {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: aboutMe;
+  }
+  .item-b {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: myPic;
+  }
+  .item-c {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: mySkills;
+  }
+  .item-d {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: schoolPic;
+  }
+  .item-e {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: school;
+  }
+}
+
+@media (min-width: 992px) {
+  .overlay a {
+    font-size: 6rem;
+  }
+  header h1 {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.5rem;
+  }
+  header h2 {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

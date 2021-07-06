@@ -290,7 +290,7 @@ header a:focus {
   background-color: whitesmoke;
 }
 
-#projects {
+.projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,19 +303,13 @@ header a:focus {
   padding: 1rem;
 }
 
-#projects2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
+/* #projects2 {
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
   padding: 1rem;
-}
-
+} */
 .my-cards {
   width: 30%;
   -webkit-animation: zoomOut 0.8s ease-in-out;

@@ -304,7 +304,7 @@ header {
   }
 }
 
-#projects {
+.projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -312,13 +312,13 @@ header {
   padding: 1rem;
 }
 
-#projects2 {
+/* #projects2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
   padding: 1rem;
-}
+} */
 
 .my-cards {
   //height: 100%;

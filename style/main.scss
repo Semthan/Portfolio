@@ -144,7 +144,8 @@ header {
   height: 100vh;
   min-height: 500px;
   //background-image: url("../media/hero.jpg");
-  background-color: gray;
+  //background-color: gray;
+  @include dark2Light();
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

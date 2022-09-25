@@ -62,7 +62,15 @@ html {
 header {
   height: 100vh;
   min-height: 500px;
-  background-color: gray;
+  background: black;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(white));
+  background: linear-gradient(to bottom, black 0%, white 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
